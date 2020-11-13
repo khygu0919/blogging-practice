@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package com.example.myprotobuf;
+
+option java_package = "com.example.myprotobuf";
+option java_outer_classname = "UserInfo"; // 다른 액티비티에서 불러올 때 사용할 이름
+
+message Person { // Person 구조 정의
+  required string name = 1; // proto2에서는 required, oprional로 필수 여부 체크
+  required int32 id = 2;
+  optional string email = 3;
+  repeated PhoneNumber phone = 4; // 하위 protobuf 구조를 자식으로 가질 수 있음
+
+
+  message PhoneNumber {
+    required string number = 1;
+    optional PhoneType type = 2 [default = HOME]; // 입력되지 않으면 HOME으로 지정
+  }
+
+  enum PhoneType { // PhoneType의 각 속성값을 상수화
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+  }
+}
+
+message AddressBook {
+  repeated Person people = 1;
+}
