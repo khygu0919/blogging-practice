@@ -7,14 +7,14 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_main_notify"
+        android:id="@+id/btn_main_to_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="166dp"
         android:layout_marginBottom="344dp"
-        android:text="알림 보내기"
+        android:text="다음 액티비티로"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
