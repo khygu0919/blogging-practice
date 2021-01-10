@@ -3,12 +3,9 @@ package com.example.myfirebasenotification;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
-import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -50,14 +47,16 @@ public class MessagingService extends FirebaseMessagingService {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
                 builder.setVibrate(new long[] {200, 100, 200});
             }
-            builder.setAutoCancel(true)
+            builder.setSmallIcon(R.drawable.smile)
+                    .setAutoCancel(true)
                     .setDefaults(Notification.DEFAULT_SOUND)
-                    .setColor(Color.CYAN)
                     .setContentTitle(title)
                     .setContentText(message);
 
             if (topic.equals(topics[0])) {
                 notificationId = 0;
+            } else if (topic.equals(topics[1])) {
+                notificationId = 1;
             }
 
             if (notificationId >= 0) {
