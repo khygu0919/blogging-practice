@@ -23,12 +23,6 @@ public class MessagingService extends FirebaseMessagingService {
         makeNotification(remoteMessage);
     }
 
-    @Override
-    public void onNewToken(String s) {
-        Log.e("token?", s);
-        super.onNewToken(s);
-    }
-
     private void makeNotification(RemoteMessage remoteMessage) {
         try {
             int notificationId = -1;
@@ -71,4 +65,9 @@ public class MessagingService extends FirebaseMessagingService {
         }
     }
 
+    @Override
+    public void onNewToken(String s) {
+        Log.e("token?", s);
+        super.onNewToken(s);
+    }
 }
