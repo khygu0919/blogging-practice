@@ -16,7 +16,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 public class NetworkFunction {
-    static String TEST_GRAPHQL_API = "https://fv2mhz3f1j.execute-api.ap-northeast-2.amazonaws.com/graphql-api-stage/graphql-test";
+    static String TEST_GRAPHQL_API = "API_URL";
 
     public static class AsyncGraphQLRequest extends AsyncTask<Void, Void, JSONObject> {
         JSONObject input;
