@@ -1,0 +1,24 @@
+# this is an auto generated file. This will be overwritten
+query GetChallengeSet($input: GetChallengeTypeInput) {
+  getChallengeSet(input: $input) {
+    timestamp
+    sourceType
+    challengeHash
+    challengeSet
+  }
+}
+query GetChallengeResult($input: GetChallengeResultInput!) {
+  getChallengeResult(input: $input) {
+    timestamp
+    sourceType
+    challengeHash
+    result {
+      name
+      score
+      rank
+    }
+    competitionSize
+    userRank
+    userScore
+  }
+}
