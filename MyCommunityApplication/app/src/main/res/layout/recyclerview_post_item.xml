@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootPost"
+    android:background="?attr/selectableItemBackground"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/layoutPostContent" android:paddingBottom="1dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="51dp" android:paddingStart="12dp" android:paddingEnd="12dp">
+        <com.google.android.flexbox.FlexboxLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" app:alignItems="baseline">
+
+            <TextView
+                android:id="@+id/textPostCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorCategory"
+                android:textSize="13sp"
+                app:layout_flexGrow="0"
+                app:layout_flexShrink="0" />
+            <androidx.appcompat.widget.AppCompatImageView android:id="@+id/iconPostMark" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_baseline_check_circle_24" android:layout_marginEnd="4dp" app:layout_flexGrow="0" app:layout_flexShrink="0"/>
+
+            <TextView
+                android:id="@+id/textPostTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/gray900"
+                android:textSize="15sp"
+                app:layout_flexGrow="0"
+                app:layout_flexShrink="1" />
+
+            <TextView
+                android:id="@+id/textPostComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="13sp"
+                app:layout_flexGrow="0"
+                app:layout_flexShrink="0" />
+        </com.google.android.flexbox.FlexboxLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp">
+            <com.google.android.flexbox.FlexboxLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:alignItems="baseline">
+
+                <TextView
+                    android:id="@+id/textPostName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/gray500"
+                    android:textSize="12sp"
+                    app:layout_flexGrow="0"
+                    app:layout_flexShrink="1" />
+                <androidx.appcompat.widget.AppCompatImageView android:id="@+id/iconPostUserType" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_baseline_person_24" android:tint="@color/gray900" android:layout_marginStart="4dp" app:layout_flexGrow="0" app:layout_flexShrink="0"/>
+
+                <TextView
+                    android:id="@+id/textArticleUserAgency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/gray500"
+                    android:textSize="12sp"
+                    app:layout_flexGrow="0"
+                    app:layout_flexShrink="0" />
+                <TextView android:textSize="12sp" android:textColor="@color/gray500" android:ellipsize="end" android:id="@+id/textArticleUserMemo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_weight="1" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" app:layout_flexGrow="0" app:layout_flexShrink="0"/>
+            </com.google.android.flexbox.FlexboxLayout>
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_eye" android:tint="@color/gray500" android:layout_marginStart="4dp"/>
+
+            <TextView
+                android:id="@+id/textPostView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/gray500"
+                android:textSize="12sp" />
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" android:tint="@color/gray500" android:layout_marginStart="4dp"/>
+
+            <TextView
+                android:id="@+id/textPostRatingUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/gray500"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textPostDatetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/gray500"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_gravity="bottom" android:background="@color/gray300" android:layout_width="match_parent" android:layout_height="1dp"/>
+
+</FrameLayout>
